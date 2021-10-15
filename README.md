@@ -32,3 +32,21 @@ https://docs.mongodb.com/manual/replication/
 6 . go to secondary DB and exec db.setSlaveOk()
 
 7 . finally exec db.YOURDBNAME.find()
+
+#---------------------------------------------------------------------------------
+#EXAMPLE : 
+comments:PRIMARY> use Microsoft
+switched to db Microsoft
+comments:PRIMARY> db.MicrosoftCollection.insert({ "Name" : "Fazel Saeedi"})
+WriteResult({ "nInserted" : 1 })
+comments:PRIMARY> db.MicrosoftCollection.find()
+{ "_id" : ObjectId("614ff931efca18b10ef57515"), "Name" : "Fazel Saeedi" }
+comments:PRIMARY> 
+
+
+
+-------------------------------------------------------------------------------
+
+
+db.setSlaveOk()
+db.MicrosoftCollection.find()
